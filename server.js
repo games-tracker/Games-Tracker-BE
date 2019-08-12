@@ -3,7 +3,7 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 
 // Load env
-dotenv.config({ path: "./config.env" });
+dotenv.config({ path: "./.env" });
 
 const app = express();
 
@@ -24,7 +24,8 @@ app.use((req, res, next) => {
 });
 
 // Profile routes
-app.use("/api/v1/profile", require("./routes/profile"));
+app.use("/api/v1/profile", require("./routes/apexProfile"));
+// app.use("/api/v1/profile", require("./routes/overwatchProfile"));
 
 const port = process.env.PORT || 8000;
 
