@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 
 // Profile routes
 app.use("/api/v1/profile", require("./routes/apexProfile"));
-app.use("/api/v1/profile", require("./routes/overwatchProfile"));
+// app.use("/api/v1/profile", require("./routes/overwatchProfile"));
 
 const port = process.env.PORT || 8000;
 
